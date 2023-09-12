@@ -84,10 +84,12 @@
             </div>
         </div>
 
-        <div class="icons">
+        <div class="icons" style="display: flex;justify-content: center;align-items: center;">
             <i class="fa-solid fa-magnifying-glass" id="icon1"></i>
             <a href="#ReviewSection"><i class="fa-solid fa-heart" id="icon1"></i></a>
-            <a href="./products.html"><i class="fa-solid fa-cart-shopping" id="icon1"></i></a>
+            <button type="button" id="to-cart-item1" style="display: flex;justify-content: center;align-items: center;border: none;background-color: transparent;">
+                <i class="fa-solid fa-cart-shopping" id="icon1"></i>
+            </button>
         </div>
         <div class="hamburgerContainer">
             <div class="line line1"></div>
@@ -499,7 +501,7 @@
                     <input type="text" placeholder="you number" class="Orderin"><br>
                     <label>You Order</label>
                     <input type="text" placeholder="Item name" class="Orderin">
-                    <a href="./products.html"><button class="btn btnOrder3">Order Now</button></a>
+                   <button class="btn btnOrder3" id="to-cart-item2">Order Now</button>
                 </div>
                 <div class="input2">
                     <label>Email</label>

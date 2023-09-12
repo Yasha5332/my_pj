@@ -102,6 +102,8 @@ btnlogout.addEventListener('click',(e)=>{
     loginUser.style.display = "none";
 
     loginContent.innerText = "";
+
+    localStorage.setItem("loginUser",null);
 })
 
 const btnTag = document.querySelector(".hamburgerContainer");
@@ -123,5 +125,31 @@ btnTag.addEventListener("click",()=>{
     line3Tag.classList.add("line3CH");
     Item.classList.add("ItemCH");
     btnTag.classList.add("RE");
+    }
+});
+
+let cartItem1 = document.querySelector("#to-cart-item1");
+let cartItem2 = document.querySelector("#to-cart-item2");
+
+
+cartItem1.addEventListener('click',(e)=>{
+    let test= JSON.parse(localStorage.getItem("loginUser"));
+    console.log(test);
+    if(test == null){
+        alert("Please Login or Register");
+    }
+     if(test.status){
+        location.href="products.html";
+    }
+});
+
+cartItem2.addEventListener('click',(e)=>{
+    let test= JSON.parse(localStorage.getItem("loginUser"));
+
+    if(test == null){
+        alert("Please Login or Register");
+    }
+     if(test.status){
+        location.href = "products.html";
     }
 });
